@@ -1,0 +1,125 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    height: 100vh;
+    overflow: hidden; /* Site genelinde dikey kaydırmayı engelle */
+    background: #f0f0f0;
+}
+
+.sidebar {
+    width: 200px;
+    background-color: #ff8787;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sidebar h2 {
+    color: white;
+    margin-bottom: 20px;
+}
+
+.sidebar ul {
+    list-style: none;
+    width: 100%;
+}
+
+.sidebar ul li {
+    margin: 15px 0;
+    width: 100%;
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    color: black;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: white;
+}
+
+.sidebar ul li a i {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+    font-size: 24px;
+    color: #ff8787;
+}
+
+.main-content {
+    flex: 1;
+    padding: 20px;
+}
+
+.header {
+    background-color: #ff6f6f;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.request-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.request-card {
+    background-color: #ff9f9f;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.request-card h3 {
+    font-size: 20px;
+    color: white;
+    margin-bottom: 10px;
+}
+
+.request-card p {
+    font-size: 18px;
+    color: white;
+    margin-bottom: 20px;
+}
+
+button {
+    background-color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #ff6f6f;
+    cursor: pointer;
+    border-radius: 5px;
+    margin: 5px;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background-color: #ff6f6f;
+    color: white;
+}
+
+.approve {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.reject {
+    background-color: #f44336;
+    color: white;
+}
+
+.approve:hover, .reject:hover {
+    opacity: 0.9;
+}

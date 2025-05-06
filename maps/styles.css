@@ -1,0 +1,113 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    display: flex;
+    height: 100vh;
+    overflow: hidden; /* Site genelinde dikey kaydırmayı engelle */
+    background: #f0f0f0;
+}
+
+.sidebar {
+    width: 200px;
+    background-color: #ff8787;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sidebar h2 {
+    color: white;
+    margin-bottom: 20px;
+}
+
+.sidebar ul {
+    list-style: none;
+    width: 100%;
+}
+
+.sidebar ul li {
+    margin: 15px 0;
+    width: 100%;
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    color: black;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: white;
+}
+
+.sidebar ul li a i {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+    font-size: 24px;
+    color: #ff8787;
+}
+
+.main-content {
+    flex: 1;
+    padding: 20px 20px 0 20px; /* Sadece üst, sağ ve sol padding, alt padding 0 */
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    display: flex;
+    justify-content: center; /* Arama çubuğunu ortalamak için */
+    align-items: center;
+    margin-bottom:25px;
+}
+
+.header form {
+    display: flex;
+    align-items: center;
+    width: 70%; /* Form genişliği */
+}
+
+.header input {
+    flex: 1;
+    padding: 12px 20px; /* Padding değerleri */
+    border: 1px solid #ccc;
+    border-radius: 30px 0 0 30px; /* Sadece sol köşeler yuvarlatıldı */
+    font-size: 16px; /* Font boyutu arttırıldı */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Hafif bir gölge eklenerek estetik görünüm sağlandı */
+    transition: all 0.3s ease; /* Hover ve focus animasyonu için geçiş eklendi */
+}
+
+.header input:focus {
+    border-color: #ff8787; /* Focus durumunda border rengini değiştirme */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Focus durumunda gölgeyi arttırma */
+    outline: none; /* Focus outline'ını kaldırma */
+}
+
+.header button {
+    margin-left: 0; /* Düğmenin giriş alanına bitişik olmasını sağla */
+    padding: 14px 20px; /* Düğme padding değerleri */
+    border: none; /* Kenarlık kaldırıldı */
+    border-radius: 0 30px 30px 0; /* Sadece sağ köşeler yuvarlatıldı */
+    background-color: #ff7373; /* Arka plan rengi */
+    color: white; /* Metin rengi */
+    cursor: pointer; /* İşaretçi tipi */
+    transition: background-color 0.3s ease; /* Hover animasyonu */
+}
+
+.header button:hover {
+    background-color: #ff5252; /* Hover durumunda arka plan rengini değiştirme */
+}
+
+#map {
+    flex: 1;
+    border-radius: 10px;
+    height: 500px; /* Haritanın yüksekliğini belirleme */
+    width: 100%; /* Haritanın genişliğini belirleme */
+}

@@ -1,0 +1,31 @@
+# Admin klasörüne erişimi engelle
+Order Deny,Allow
+Deny from all
+
+# Sadece index.php ve login.php'ye izin ver
+<Files "index.php">
+    Allow from all
+</Files>
+
+<Files "login.php">
+    Allow from all
+</Files>
+
+# PHP dosyalarına erişimi engelle
+<FilesMatch "\.php$">
+    Deny from all
+</FilesMatch>
+
+# Sadece belirli PHP dosyalarına izin ver
+<FilesMatch "^(index|login)\.php$">
+    Allow from all
+</FilesMatch>
+
+# Hata sayfası
+ErrorDocument 403 /yardimlas/403.php
+
+# Dizin listelemesini engelle
+Options -Indexes
+
+# PHP hata raporlamasını kapat
+php_flag display_errors off 
